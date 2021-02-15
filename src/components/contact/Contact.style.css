@@ -1,0 +1,39 @@
+.contact {
+  border-top: 6px solid #e9cc64;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 35px 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.contact-logo {
+  width: 60px;
+  height: 60px;
+}
+.contact-logo:hover {
+  transform: scale(1.035);
+}
+
+.contact-text {
+  font-family: "Amatic SC", cursive;
+  font-size: 22px;
+  color: #ecf0f1;
+  padding-top: 20px;
+}
+
+#celia-picture {
+  height: 180px;
+  width: 180px;
+  margin: auto;
+  border-radius: 90px;
+  object-fit: cover;
+  border: 3px solid #e9cc64;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
