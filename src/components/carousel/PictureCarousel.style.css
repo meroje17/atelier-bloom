@@ -41,11 +41,12 @@
   padding-bottom: 20px;
   text-align: center;
   color: #ecf0f1;
+  opacity: 0;
 }
 
 .paragraph {
   font-family: "Bad Script", cursive;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.6em;
   font-weight: 100;
   padding-top: 20px;
@@ -53,4 +54,75 @@
   font-style: italic;
   text-align: center;
   color: #ecf0f1;
+  opacity: 0;
+}
+
+.carousel.anim {
+  opacity: 0;
+  animation: carousel-apparition 3.5s forwards;
+}
+.carousel-subtitle.anim {
+  animation: opacity-apparition 2s 2s forwards;
+}
+.left-title.anim {
+  animation: left-apparition 2.5s forwards;
+}
+.right-title.anim {
+  animation: right-apparition 2.5s forwards;
+}
+.paragraph.anim {
+  animation: down-apparition 2s 1s forwards;
+}
+
+@keyframes left-apparition {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-apparition {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes down-apparition {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes carousel-apparition {
+  from {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

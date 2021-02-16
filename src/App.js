@@ -19,13 +19,13 @@ function App() {
         picturesArray={flowers}
         title="Fleurs séchées"
         subtitle="A partir de 15€"
-        paragraph="L'atelier Bloom propose des bouquets de fleurs séchées confectionnés avec amour et passion dans son atelier. Des créations poétiques et raffinées, durables et responsables. Succomber à l’un de nos bouquets en fleurs séchées c’est profiter de jolies compositions sans les voir faner."
+        paragraph="L’atelier Bloom propose des bouquets et des compositions de fleurs séchées confectionnés avec passion dans mon atelier. Des créations durables dans le temps et responsables. Profitez de jolies compositions sans les voir faner."
       />
       <PictureCarousel
         link="terrarium"
         picturesArray={terrariums}
         title="Terrarium"
-        subtitle="A partir de 15€"
+        subtitle="A partir de 10€"
         paragraph="Créatif et décoratif, le terrarium réinvente le végétal ! Plongez votre intérieur dans un esprit 100% nature en adoptant la tendance du terrarium. Vous n'avez pas la main verte ? Bonne nouvelle : les plantes qui vivent dans ces bulles de verre nécessitent très peu d'entretien."
         alt
       />
@@ -40,16 +40,16 @@ function App() {
         link="resine"
         picturesArray={resines}
         title="Résines"
-        subtitle="A partir de 15€"
-        paragraph="Je crée chaque bijou végétal à la main dans mon atelier, en apportant tout le soin nécessaire à chaque pièce. La résine, transparente ou colorée, permet de préserver idéalement les fleurs et conserver leur fraîcheur naturelle."
+        subtitle="A partir de 12€"
+        paragraph="Je crée chaque résine végétal à la main dans mon atelier, en apportant tout le soins nécessaires à chaque pièce. La résine permet d’immortaliser les fleurs."
         alt
       />
       <PictureCarousel
         link="pottery"
         picturesArray={potteries}
-        title="Jardinière/Poterie"
-        subtitle="A partir de 15€"
-        paragraph="Pour un balcon, une terrasse ou un jardin fleuri, choisissez de belles jardinières. Poterie, céramique ou bac à fleurs, retrouvez nos articles pour vous aider à faire le bon choix. Vos fleurs et potager miniature vous diront merci !"
+        title="Compositions cactées"
+        subtitle="A partir de 6.50€"
+        paragraph="Ces pièces uniques de compositions cactées apporteront une note végétale à vos intérieurs."
       />
       <Contact />
     </div>

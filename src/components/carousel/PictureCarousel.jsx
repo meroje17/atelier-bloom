@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "./PictureCarousel.style.css";
 
@@ -11,9 +11,27 @@ function PictureCarousel({
   alt,
 }) {
   const [index, setIndex] = useState(0);
+  const [leftTitleClass, setLeftTitleClass] = useState(
+    "carousel-title left-title"
+  );
+  const [rightTitleClass, setRightTitleClass] = useState(
+    "carousel-title right-title"
+  );
+  const [subtitleClass, setSubtitleClass] = useState("carousel-subtitle");
+  const [paragraphClass, setParagraphClass] = useState("paragraph");
+  const [carouselClass, setCarouselClass] = useState("carousel");
+  const carousel = useRef(null);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+  };
+
+  const launchAnim = () => {
+    setLeftTitleClass("carousel-title left-title anim");
+    setRightTitleClass("carousel-title right-title anim");
+    setSubtitleClass("carousel-subtitle anim");
+    setParagraphClass("paragraph anim");
+    setCarouselClass("carousel anim");
   };
 
   const items = picturesArray.map((picture) => {
@@ -24,20 +42,37 @@ function PictureCarousel({
     );
   });
 
+  useEffect(() => {
+    let options = {
+      threshold: 0.1,
+    };
+
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) launchAnim();
+      });
+    }, options);
+
+    observer.observe(carousel.current);
+  }, []);
+
   return (
-    <div id={link} className="block-carousel">
+    <div ref={carousel} id={link} className="block-carousel">
       <div className="left-carousel">
         {!alt ? (
           <>
-            <h2 id={link} className="carousel-title">
-              {title}
-            </h2>
-            <p className="carousel-subtitle">{subtitle}</p>
-            <p className="paragraph">{paragraph}</p>
+            <h2 className={leftTitleClass}>{title}</h2>
+            <p className={subtitleClass}>{subtitle}</p>
+            <p className={paragraphClass}>{paragraph}</p>
           </>
         ) : (
           <>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel
+              indicators={true}
+              className={carouselClass}
+              activeIndex={index}
+              onSelect={handleSelect}
+            >
               {items}
             </Carousel>
           </>
@@ -46,12 +81,17 @@ function PictureCarousel({
       <div className="right-carousel">
         {alt ? (
           <>
-            <h2 className="carousel-title">{title}</h2>
-            <p className="carousel-subtitle">{subtitle}</p>
-            <p className="paragraph">{paragraph}</p>
+            <h2 className={rightTitleClass}>{title}</h2>
+            <p className={subtitleClass}>{subtitle}</p>
+            <p className={paragraphClass}>{paragraph}</p>
           </>
         ) : (
-          <Carousel activeIndex={index} onSelect={handleSelect}>
+          <Carousel
+            indicators={true}
+            className={carouselClass}
+            activeIndex={index}
+            onSelect={handleSelect}
+          >
             {items}
           </Carousel>
         )}

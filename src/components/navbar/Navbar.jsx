@@ -12,7 +12,7 @@ const Navbar = () => {
     "Terrarium",
     "Roses éternelles",
     "Résines",
-    "Jardinière/Poterie",
+    "Compositions cactées",
   ];
 
   const summaryImg = [flower, terrarium, rose, glass, pottery];
