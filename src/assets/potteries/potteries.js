@@ -6,7 +6,6 @@ import pottery5 from "./pottery5.jpg";
 import pottery6 from "./pottery6.jpg";
 import pottery7 from "./pottery7.jpg";
 import pottery8 from "./pottery8.jpg";
-import pottery9 from "./pottery9.jpg";
 
 const potteries = [
   pottery1,
@@ -17,7 +16,6 @@ const potteries = [
   pottery6,
   pottery7,
   pottery8,
-  pottery9,
 ];
 
 export default potteries;
