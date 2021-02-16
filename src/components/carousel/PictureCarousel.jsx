@@ -25,7 +25,7 @@ function PictureCarousel({
   });
 
   return (
-    <div className="block-carousel">
+    <div id={link} className="block-carousel">
       <div className="left-carousel">
         {!alt ? (
           <>
@@ -46,9 +46,7 @@ function PictureCarousel({
       <div className="right-carousel">
         {alt ? (
           <>
-            <h2 id={link} className="carousel-title">
-              {title}
-            </h2>
+            <h2 className="carousel-title">{title}</h2>
             <p className="carousel-subtitle">{subtitle}</p>
             <p className="paragraph">{paragraph}</p>
           </>
