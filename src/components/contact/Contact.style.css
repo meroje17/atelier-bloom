@@ -29,11 +29,34 @@
 }
 
 #celia-picture {
-  height: 180px;
-  width: 180px;
+  height: 14vw;
+  width: 14vw;
   margin: auto;
-  border-radius: 90px;
+  border-radius: 50%;
   object-fit: cover;
   border: 3px solid #e9cc64;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-text {
+    display: none;
+  }
+  #celia-picture {
+    height: 18vw;
+    width: 18vw;
+  }
+  .contact-logo {
+    height: 9vw;
+    width: 9vw;
+  }
+  .contact {
+    padding: 30px 0;
+  }
 }
