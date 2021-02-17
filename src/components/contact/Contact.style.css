@@ -66,4 +66,12 @@
     height: 12vw;
     width: 12vw;
   }
+  #celia-picture {
+    height: 20vw;
+    width: 20vw;
+  }
+  .contact {
+    border-top: 4px solid #e9cc64;
+    padding: 25px 0;
+  }
 }
