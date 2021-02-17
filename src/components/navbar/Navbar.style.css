@@ -78,3 +78,13 @@
     padding: 5px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .navbar-summary {
+    column-gap: 0;
+    padding: 0;
+  }
+  .navbar {
+    padding: 12px 8px;
+  }
+}
