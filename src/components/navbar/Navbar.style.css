@@ -4,11 +4,11 @@
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 20px;
-  padding: 20px;
+  padding: 30px;
 }
 
 .navbar-module {
-  border: 5px solid #333333;
+  border: 4px solid #e9cc64;
   border-radius: 8px;
   background-color: #ecf0f1;
   height: 15vw;
