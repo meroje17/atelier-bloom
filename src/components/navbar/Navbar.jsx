@@ -23,7 +23,11 @@ const Navbar = () => {
     let modulesArray = [];
     for (let index = 0; index < 5; index++) {
       modulesArray.push(
-        <a className="navbar-module" href={summaryTags[index]}>
+        <a
+          className="navbar-module"
+          href={summaryTags[index]}
+          key={"key" + summaryTags[index] + "unique"}
+        >
           <img
             className="navbar-image"
             src={summaryImg[index]}

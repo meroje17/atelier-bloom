@@ -1,5 +1,5 @@
 .slide {
-  height: 65vh;
+  height: 60vh;
   width: 100%;
   margin: auto;
   object-fit: contain;
@@ -127,8 +127,49 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
+  .carousel-title {
+    font-size: 55px;
+  }
+  .carousel-subtitle {
+    font-size: 15px;
+  }
+  .paragraph {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .carousel-title {
+    font-size: 50px;
+  }
+  .carousel-subtitle {
+    font-size: 12px;
+  }
+  .paragraph {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .block-carousel {
     border-top: 4px solid #e9cc64;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    margin-bottom: 40px;
+  }
+  .carousel-title {
+    font-size: 60px;
+  }
+  .carousel-subtitle {
+    font-size: 18px;
+  }
+  .paragraph {
+    font-size: 24px;
+    margin: 0 20px;
+  }
+  .slide {
+    height: 50vh;
   }
 }

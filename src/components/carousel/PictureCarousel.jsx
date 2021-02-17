@@ -36,7 +36,7 @@ function PictureCarousel({
 
   const items = picturesArray.map((picture) => {
     return (
-      <Carousel.Item interval={3000}>
+      <Carousel.Item interval={3000} key={"key" + Math.random() + "unique"}>
         <img className="d-block w-100 slide" src={picture} alt="slide" />
       </Carousel.Item>
     );

@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Contact from "./components/contact/Contact";
@@ -10,6 +11,13 @@ import resines from "./assets/resines/resines";
 import potteries from "./assets/potteries/potteries";
 
 function App() {
+  const [isPhone, setIsPhone] = useState(window.innerWidth <= 650);
+
+  window.onresize = function (event) {
+    if (event.currentTarget.innerWidth <= 650 && !isPhone) setIsPhone(true);
+    if (event.currentTarget.innerWidth > 650 && isPhone) setIsPhone(false);
+  };
+
   return (
     <div className="App">
       <Home />
@@ -27,7 +35,7 @@ function App() {
         title="Terrarium"
         subtitle="A partir de 10€"
         paragraph="Créatif et décoratif, le terrarium réinvente le végétal ! Plongez votre intérieur dans un esprit 100% nature en adoptant la tendance du terrarium. Vous n'avez pas la main verte ? Bonne nouvelle : les plantes qui vivent dans ces bulles de verre nécessitent très peu d'entretien."
-        alt
+        alt={!isPhone}
       />
       <PictureCarousel
         link="rose"
@@ -42,7 +50,7 @@ function App() {
         title="Résines"
         subtitle="A partir de 12€"
         paragraph="Je crée chaque résine végétal à la main dans mon atelier, en apportant tout le soins nécessaires à chaque pièce. La résine permet d’immortaliser les fleurs."
-        alt
+        alt={!isPhone}
       />
       <PictureCarousel
         link="pottery"
